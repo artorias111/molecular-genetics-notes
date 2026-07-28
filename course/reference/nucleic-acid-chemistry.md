@@ -165,6 +165,48 @@ energy source (ATP or NAD⁺ instead of a dNTP). If the 5′ side carries an OH 
 phosphate, ligase cannot act — which is why "gap" versus "nick" versus "end chemistry"
 matters in every repair pathway in M2.
 
+### Where each nuclease physically stands at an Okazaki junction
+
+Draw the junction once and both answers fall out. Fork moving **right**. The lagging strand
+is built in fragments that each start near the fork and extend *backwards*, away from it:
+
+```
+                                                  ← fork travels this way is RIGHT
+    older fragment            newer fragment
+5'──────RNA──────3' OH   p5'──RNA──────────3'──── (still growing, near the fork)
+        ▲             ╲ ╱                  ▲
+        │              nick                │
+   5'→3' exo stands here            3'→5' exo stands here
+   (on the 5' end of the             (on the nascent 3'-OH,
+    downstream primer)                the end the polymerase is building)
+```
+
+**The 5′→3′ exonuclease** stands on the **5′ end of the RNA primer**, right at the nick, and
+hydrolyses *forwards* (5′→3′) into that primer. Because every fragment's 5′ end is its
+fork-proximal end, travelling 5′→3′ carries the enzyme **away from the fork**, into
+already-replicated DNA. Pol I's polymerase site follows in lock-step from the 3′-OH on the
+other side of the nick — the nick moves without ever becoming a gap. That is
+**nick translation**.
+
+**The 3′→5′ proofreading exonuclease** stands on the **nascent 3′-OH** — the same end the
+polymerase builds at — and backs up 3′→5′, i.e. **toward the fork** on a lagging fragment
+(it is retracing the path synthesis just took).
+
+**Why the primer never presents itself to the proofreading exo.** Not because proofreading
+is confined to the leading strand — *it isn't.* Every Pol III core carries an ε subunit, and
+lagging-strand fragments are proofread exactly like leading-strand DNA. The real reason is
+end chemistry:
+
+> A 3′→5′ exonuclease attacks a free **3′ end**. An RNA primer is at a **5′ end**. The
+> primer's own 3′ end is not free — it is covalently continuous with the DNA the polymerase
+> extended from it. There is no 3′ terminus on a primer for the enzyme to grab.
+
+And the primer that the 5′→3′ exo does attack sits on the *far side of the nick* from the
+3′-OH the proofreader occupies. Two enzymes, two ends, two substrates, no overlap. This is
+the general shape of the answer whenever you're asked "why can't enzyme X do job Y" in
+replication: check which **terminus** each one requires, then check whether that terminus
+exists.
+
 ---
 
 ## 5 · One-line recall set
@@ -179,3 +221,7 @@ matters in every repair pathway in M2.
 - Irreversibility comes from **pyrophosphatase**, a separate enzyme.
 - Synthesis is 5′→3′ **because** proofreading has to be survivable.
 - Ligase seals **3′-OH + 5′-phosphate**.
+- **5′→3′ exo** stands on a primer's **5′ end** at the nick, runs **away from the fork**.
+- **3′→5′ exo** stands on the **nascent 3′-OH**, backs up **toward the fork**.
+- The primer is invisible to the proofreader because **a primer has no free 3′ end** — not
+  because proofreading skips the lagging strand. It doesn't.

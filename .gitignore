@@ -1,2 +1,5 @@
 *.pdf
 progress.md
+
+course/drill/state.json
+course/drill/attempts.log
