@@ -3,3 +3,7 @@ progress.md
 
 course/drill/state.json
 course/drill/attempts.log
+
+solutions/*
+
+course/reference/.build/
