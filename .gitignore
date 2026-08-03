@@ -7,3 +7,5 @@ course/drill/attempts.log
 solutions/*
 
 course/reference/.build/
+
+.DS_Store
