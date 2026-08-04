@@ -9,3 +9,4 @@ solutions/*
 course/reference/.build/
 
 .DS_Store
+ai-grader/
