@@ -6,7 +6,7 @@ This syllabus unifies CS229, Math-CS, Code-Learn, and Genetics into a single dai
 ## The Rules
 - **Daily 45-min Typst Paper:** Split into Genetics (20m), Math/ML (15m), and CS/Code (10m).
 - **Biology Question Design:** Must be application-based (like a manageable Bio Olympiad problem), avoiding simple "What is X" recall questions.
-- **Appendix Design:** ~1 hour's worth of optional practice content. Include clever, simple problems like basic integrals, ODEs, matrix operations, or bioinformatics puzzles.
+- **Adaptive Difficulty:** Coding sections must be challenging (assume strong baseline knowledge). The Appendix (~1 hour optional practice) must adaptively target identified weaknesses from previous days (e.g., vector calculus, geometry) rather than generic trivia.
 - **Problem Sets:** All daily sheets go into `problem-sets/problems-day-NN.typ`.
 
 ## Module 1: The Linear & Sequence Foundations (Months 1–2)
