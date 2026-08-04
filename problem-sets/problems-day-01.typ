@@ -21,11 +21,11 @@
 ]
 
 #question(space: 1.5in)[
-  *1.* Briefly describe the role of CTCF and cohesin in loop extrusion. Why is the orientation of the CTCF binding motifs critical for this process?
+  *1.* You observe a dramatic upregulation of a proto-oncogene. Hi-C data shows that a TAD boundary between this gene and a highly active super-enhancer is missing. If you sequence the CTCF binding sites at this former boundary, what specific mutation (or inversion) would you expect to find that explains the collapse of loop extrusion here?
 ]
 
 #question(space: 1.5in)[
-  *2.* Given a Hi-C contact matrix representing a TAD, dimension-check the matrix (i.e. what are the axes and shape?) and sketch the visual pattern that indicates a TAD boundary.
+  *2.* You are designing a synthetic DNA construct and want to artificially insulate a promoter from a downstream enhancer. Sketch the arrangement of CTCF binding motifs (indicating orientation with arrows) you would insert between them, and explain how cohesin would interact with this arrangement to form a new TAD boundary.
 ]
 
 #pagebreak()
@@ -71,16 +71,17 @@
   *Note:* This section is excluded from the 45-minute timer. Attempt only if you have time to kill.
 ]
 
-#question(space: 1.5in)[
-  *Bonus (Trace it):* What exact output is printed when this Python code is executed?
-  
-  #code_block(lang: "python", "def gen():
-    for i in range(2):
-        yield i
-        yield i * 10
+#question(space: 1in)[
+  *Bonus 1 (Trace it):* What exact output is printed when this Python code is executed?
+  #code_block(lang: "python", "print([x * 2 for x in range(3)])")
+]
 
-result = list(gen())
-print(result)")
+#question(space: 1in)[
+  *Bonus 2 (Math):* What is the derivative of $f(x) = e^(2x)$?
+]
+
+#question(space: 1in)[
+  *Bonus 3 (Code):* You have a dictionary `freq = {\"A\": 10, \"C\": 5}`. Write a safe one-liner to get the frequency of `\"G\"` without throwing a KeyError (defaulting to 0).
 ]
 
 #closing_block[Stop the timer. Grade your paper, then return it for feedback.]
