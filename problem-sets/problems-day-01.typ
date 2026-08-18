@@ -8,10 +8,10 @@
 #section_heading("Timer")
 
 #timer_table(
-  reading: "10m",
-  drill: "15m",
-  written: "20m",
-  total: "45m"
+  genetics: "25m",
+  math: "20m",
+  code: "10m",
+  total: "55m"
 )
 
 #section_heading("Section 1: Genetics (20 mins)")
@@ -40,7 +40,7 @@
   *3. Derive it.* Get from the definition of the single-example cost function $J(theta) = 1/2 (h_theta(x) - y)^2$ to the gradient $partial / (partial theta_j) J(theta)$. Show your steps.
 ]
 
-#question(space: 1in)[
+#question(space: 1.5in)[
   *4.* What is the geometric interpretation of the dot product $x^T y = 0$?
 ]
 
@@ -71,17 +71,17 @@
   *Note:* This section is excluded from the 45-minute timer. Attempt only if you have time to kill.
 ]
 
-#question(space: 1in)[
+#question(space: 1.5in)[
   *Bonus 1 (Trace it):* What exact output is printed when this Python code is executed?
   #code_block(lang: "python", "print([x * 2 for x in range(3)])")
 ]
 
-#question(space: 1in)[
+#question(space: 1.5in)[
   *Bonus 2 (Math):* What is the derivative of $f(x) = e^(2x)$?
 ]
 
-#question(space: 1in)[
+#question(space: 1.5in)[
   *Bonus 3 (Code):* You have a dictionary `freq = {\"A\": 10, \"C\": 5}`. Write a safe one-liner to get the frequency of `\"G\"` without throwing a KeyError (defaulting to 0).
 ]
 
-#closing_block[Stop the timer. Grade your paper, then return it for feedback.]
+#closing_block()

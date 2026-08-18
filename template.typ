@@ -27,22 +27,23 @@
   v(0.5em)
 }
 
-#let timer_table(reading: none, drill: none, written: none, total: none) = {
+#let timer_table(genetics: none, math: none, code: none, stats: none, total: none) = {
   align(center)[
     #table(
       columns: (100pt, 100pt),
       align: center,
       stroke: 0.5pt,
       [*Section*], [*Time*],
-      ..if reading != none { ("Reading", reading) } else { () },
-      ..if drill != none { ("Drill", drill) } else { () },
-      ..if written != none { ("Written", written) } else { () },
+      ..if genetics != none { ("Genetics", genetics) } else { () },
+      ..if math != none { ("Math/ML", math) } else { () },
+      ..if code != none { ("CS/Code", code) } else { () },
+      ..if stats != none { ("Stats", stats) } else { () },
       [*Total*], [*#total*]
     )
   ]
 }
 
-#let question(space: 1in, body) = {
+#let question(space: 1.5in, body) = {
   question_counter.step()
   v(1em)
   context [
@@ -103,10 +104,10 @@
   v(0.5em)
 }
 
-#let closing_block(body) = {
+#let closing_block() = {
   v(2em)
   align(center)[
     *End of Day* \
-    #body
+    Stop the timer. Return the sheet as-is — don't check anything first.
   ]
 }

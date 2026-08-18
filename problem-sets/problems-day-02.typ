@@ -8,16 +8,16 @@
 #section_heading("Timer")
 
 #timer_table(
-  reading: "10m",
-  drill: "15m",
-  written: "20m",
-  total: "45m"
+  genetics: "25m",
+  math: "20m",
+  code: "10m",
+  total: "55m"
 )
 
 #section_heading("Section 1: Genetics (20 mins)")
 
 #ref_box[
-  *Reading (8-10 mins):* Genes XII, Chapter 29 (Chromatin), pages ~835–840 (Histone Modifications, Readers/Writers, and Heterochromatin spreading).
+  *Reading (8-10 mins):* Genes XII, Chapter 27 (Epigenetics I), PDF pages ~2729–2736 (Histone Modifications, Readers/Writers, and Heterochromatin spreading).
 ]
 
 #question(space: 1.5in)[
@@ -33,10 +33,10 @@
 #section_heading("Section 2: Math/ML (15 mins)")
 
 #ref_box[
-  *Reading (5-7 mins):* CS 229 notes Andrew Ng.pdf, Chapter 1 (Supervised Learning), pages 7–10 (Matrix Derivatives and the Normal Equations).
+  *Reading (5-7 mins):* CS 229 notes Andrew Ng.pdf, Chapter 1 (Supervised Learning), PDF pages 14–16 (Matrix Derivatives and the Normal Equations).
 ]
 
-#question(space: 1in)[
+#question(space: 1.5in)[
   *3. Dimension check.* Given the design matrix $X in RR^(n times d)$ and target vector $y in RR^n$, what is the exact dimension (shape) of the matrix product $X^T X$, and the dimension of $X^T y$?
 ]
 
@@ -79,7 +79,7 @@ fn main() {
   *Targeted Practice:* ~1 hour budget. Focused on Vector Geometry, Chain Rule, and applied Bioinformatics.
 ]
 
-#question(space: 1in)[
+#question(space: 1.5in)[
   *Bonus 1 (Geometry):* We established that $x^T y = 0$ means orthogonal vectors. If $x^T y = ||x|| ||y|| cos(theta)$, what is the geometric meaning of $x^T y$ if $x$ is a unit vector ($||x|| = 1$)?
 ]
 
@@ -91,4 +91,4 @@ fn main() {
   *Bonus 3 (Bioinformatics CLI):* You have a SAM file (`alignments.sam`). Write a one-liner using `awk` or `samtools` to count the exact number of reads that are perfectly mapped (assume perfect matches have a CIGAR string of exactly `100M` for 100bp reads, or use the `NM:i:0` tag).
 ]
 
-#closing_block[Stop the timer. Grade your paper, then return it for feedback.]
+#closing_block()
