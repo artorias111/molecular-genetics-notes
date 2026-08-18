@@ -1,6 +1,0 @@
-id|question|answer|hook
-1|What is the shape of the output of $x^T y$ if $x$ and $y$ are both $d \times 1$ column vectors?|Scalar ($1 \times 1$)|Checking matrix dimensions before taking a gradient prevents 80% of notation errors.
-2|Write the definition of the gradient $\nabla_\theta f(\theta)$ for a function $f: \mathbb{R}^d \rightarrow \mathbb{R}$. What is its shape?|It is the vector of partial derivatives, shape $d \times 1$|Gradient descent requires us to step in the direction of steepest ascent, which is exactly the gradient vector.
-3|What is the derivative of $f(x) = (y - x)^2$ with respect to $x$?|$-2(y - x)$|The core of least squares regression is minimizing squared differences.
-4|If $A$ is a symmetric matrix, what is the gradient $\nabla_x (x^T A x)$?|$2Ax$|Quadratic forms appear in almost every second-order Taylor expansion and Gaussian density you will see.
-5|What is the geometric interpretation of the dot product $x^T y = 0$?|The vectors $x$ and $y$ are orthogonal (perpendicular).|Orthogonality is the basis of projections, which we will use constantly in PCA and the normal equations.
