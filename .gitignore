@@ -10,3 +10,7 @@ course/reference/.build/
 
 .DS_Store
 ai-grader/
+
+CLAUDE.md
+SYLLABUS.md
+imported-repos
