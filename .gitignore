@@ -12,8 +12,5 @@ course/reference/.build/
 ai-grader/
 
 CLAUDE.md
-SYLLABUS.md
 imported-repos
 course/
-
-setup-prompt.md
