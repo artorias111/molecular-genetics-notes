@@ -113,12 +113,12 @@
 }
 
 // Day 20 onward: ordered, inclusive daily budget. Legacy timer_table remains for old sheets.
-#let daily_timer(review: 10, math: 20, ml: 0, biology: 20, stats: 5, buffer: 5, compact: false, calculus: 0, short_session: false, math_label: "Genotype likelihoods") = {
+#let daily_timer(review: 10, math: 20, ml: 0, biology: 20, stats: 5, buffer: 5, compact: false, calculus: 0, short_session: false, math_label: "Genotype likelihoods", closing_label: "Calculus") = {
   let total = review + math + ml + biology + stats + buffer + calculus
   assert(total <= 60, message: "Required daily work must fit within 60 minutes")
   if compact {
     if short_session {
-      text(size: 9pt)[Recall #review min · #if math > 0 [#math_label #math min · ]#if ml > 0 [ML #ml min · ]Calculus #calculus min. *Cap: #total min.*]
+      text(size: 9pt)[Recall #review min · #if math > 0 [#math_label #math min · ]#if ml > 0 [ML #ml min · ]#closing_label #calculus min. *Cap: #total min.*]
     } else {
     text(size: 9pt)[Recall #review min · Popgen #math min · ML #ml min · Bio #biology min · Stats #stats min. *Cap: #total min.*]
     }

@@ -18,3 +18,5 @@ course/
 # Optional Python project artifacts
 projects/**/__pycache__/
 projects/**/*.pyc
+
+.pixi/

@@ -1,3 +1,14 @@
+[[09-28-2026]]
+agent: claude
+
+- Took over from codex. Issued `problem-sets/set 38.typ/.pdf`: weekly HMM first-observation posterior recall, core GL posterior normalization table (likelihood max AT, posterior max AA), optional likelihood vs posterior, first closing math refresher (centering + 1/N covariance on 4 fish dosages). 3 pages, visually checked, no key.
+- Set 37 still unreturned; set 38 does not depend on it.
+- Added `closing_label` option to `daily_timer` in root `template.typ` (default "Calculus", old sheets unchanged).
+- Added `pixi.toml` + `pixi.lock` pinning typst 0.15.1 (conda-forge). Compile: `pixi run typst compile --root . "problem-sets/set NN.typ"`. `.pixi/` gitignored, README compile line updated.
+- Ran archive: 5 PDFs to OneDrive incl. set 31 PDF (now keeps 32–38). Manifest `course/archive-manifests/20260928-160629-940002.json`.
+
+---
+
 [[09-26-2026]]
 agent: codex
 

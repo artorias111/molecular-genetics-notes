@@ -14,5 +14,5 @@ projects/lcwgs-lab/       Optional running Python project; one pending task at a
 textbooks/                Local books (not redistributed)
 reference/               Rescued mathematics references
 
-Compile from this directory: typst compile problem-sets/problems-day-20.typ
+Compile from this directory: pixi run typst compile --root . "problem-sets/set NN.typ" (typst pinned in pixi.toml)
 Keep the existing 6.2 x 8.27 inch handwriting format. No answer keys accompany new sheets.
