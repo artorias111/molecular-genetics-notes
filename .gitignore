@@ -11,6 +11,10 @@ course/reference/.build/
 .DS_Store
 ai-grader/
 
-CLAUDE.md
+AGENTS.md
 imported-repos
 course/
+
+# Optional Python project artifacts
+projects/**/__pycache__/
+projects/**/*.pyc

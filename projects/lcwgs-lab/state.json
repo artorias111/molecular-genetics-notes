@@ -1,0 +1,10 @@
+{
+  "task_id": "001",
+  "issued_with_day": 20,
+  "status": "pending",
+  "ready_for_review": false,
+  "last_reviewed_task": null,
+  "learner_file": "likelihood.py",
+  "starter_sha256": "eade2c87837faf6c6b2cfc116b511740254949e39a0a91c3fd7cded03d5d932d",
+  "review_rule": "Review only on explicit submission or current-task.md Ready for review: yes; reconcile this state then. Carry unattempted work forward unchanged."
+}

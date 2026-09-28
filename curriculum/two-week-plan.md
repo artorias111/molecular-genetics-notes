@@ -1,4 +1,4 @@
-# Short learning sessions: understand autoencoder mathematics
+# Adaptive route: explain a tiny autoencoder
 
 ## Closing math rotation replaces routine integrals — learner request, 2026-09-25
 
@@ -40,39 +40,31 @@ Preserve the learner's existing ~12-minute target / 15-minute stop, five-minute 
 At mid-October, assess ability to identify each required method's estimand, data, latent quantities/parameters, assumptions, key expression and uncertainty/failure modes. Then prioritize Bishop-guided ML: neural-network/autoencoder foundations, matrix calculus and optimization, categorical prediction/softmax and negative log-likelihood, then sequence architectures and Evo 2 paper explanation as progress supports. Remaining popgen repairs should be explicit and learner-directed, not an indefinitely scheduled strand. No grades, original sheets or returns change with this correction.
 
 
-## Naming and display from set 31 — learner request, 2026-09-21
-
-Starting with the next sheet (set 31), use `problem-sets/problem set 31.typ` and `problem-sets/problem set 31.pdf`, incrementing the number for subsequent sets. The visible main title is exactly `molbio/ml set 31` (with the corresponding number thereafter), replacing “Daily Synthesis — Day …”. Every page header uses `molbio/ml set NN` in place of its old “Day NN” label; retain the existing topic/question-count information. Keep the molbio/ml label even when no biology is included. Remove the elapsed-time / “Actual minutes” fill-in blank. Retain timing guidance, the session cap, hints-used field and all other content/layout rules. Do not rename or regenerate sets through Day 30 or alter returned solutions. This preference changes only future naming, title/header labels and the time blank; no other changes requested.
-
 Day 26 return calibration (2026-09-19): learner explicitly confirms the short format works; retain it, targeting about 12 minutes with a 15-minute stop for upcoming sheets. All four answers correct. Remove repeated elementary negative-sign/squaring reminders per margin feedback; reserve hints for new concepts or observed errors. Do not expand workload because this first attempt succeeded.
 
-## Active short-session contract — 2026-09-19 (codex)
+Revised 2026-09-19 by codex. This replaces the former Days 24–37 calendar. These are small milestones, not deadlines; split or repair them based on attempts. Main sessions take 10–20 minutes including recall and a 2–4-minute calculus finish. A five-minute core counts as complete.
 
-This learner-approved revision supersedes the older hour-long schedule, Days 24–37 sequencing, ten-MCQ quota and response minimums below. Daily availability does not require daily completion; skipped days create no backlog.
+| Milestone | Five-minute core | Optional next step |
+|---|---|---|
+| 1. Follow the model (Day 26) | Encode two numbers into one; decode back into two | Calculate one reconstruction loss |
+| 2. Understand the shapes | Match input, code and output dimensions to matrices | Change one input; compare reconstructions |
+| 3. Understand error | Compute squared reconstruction error | Compare two supplied parameter choices |
+| 4. Change one weight | Express reconstruction loss as a function of one weight | Differentiate a small polynomial loss |
+| 5. Connect the chain | Differentiate decoder output with respect to the code | Trace one encoder weight's effect through the decoder |
+| 6. Learn one step | Use a supplied gradient and learning rate | Recompute loss after the update |
+| 7. Explain the bottleneck | Show two inputs that share a code in a toy linear model | Connect linear reconstruction to PCA with assumptions supplied |
+| 8. Add nonlinearity | Apply a supplied activation in a tiny forward pass | Explain why training loss alone does not ensure a useful representation |
+| 9. Explain the full model | Annotate encoder, decoder, loss and update in one diagram | Give a short end-to-end explanation in your own words |
 
-- Main thread: approachable Bishop-guided mathematics toward explaining a deterministic autoencoder. A complete five-minute core, one optional extension, and one or two relevant recall items within a 10–20-minute ceiling, including reading and closing calculus. Start with an actual tiny autoencoder; supply prerequisites just before use. Follow `curriculum/two-week-plan.md` for the new adaptive route, not the former calendar plan.
-- Genotype likelihoods: one focused 10–15-minute task every second or third completed session; it may replace ML rather than stack on top. Preserve pending one-read reconstruction and posterior normalization repairs. No advancement from unattempted Day 25.
-- Biology: optional when the learner has time/interest; offer a coherent mechanism when requested, not a compulsory daily section. Stats joins relevant models rather than a separate daily requirement. Optional Python stays opt-in and pending until submitted.
-- Recall: one or two relevant short items total, integrated into the session. DateNotes/chat learning remains an eligible pool, not a five-item quota or required daily scan. Read notes only; distinguish studied concepts from to-dos, thesis/admin details and missing logs. Source-check selected items; do not infer mastery.
-- Closing calculus: include one brief integration question, occasionally two, at the end; target 2–4 minutes inside the ceiling. Vary familiar high-school techniques deliberately for ML relevance: powers and polynomial expected losses; bounded density areas/normalization; then exponentials, simple substitution and expectations as attempts permit. Give a tiny optional hint. Avoid arbitrary trick integrals, a separate calculus course, and non-elementary Gaussian antiderivatives. These are confidence-building refreshers, not prerequisites blocking autoencoder progress. The five-minute core still counts as a complete session if the learner stops there.
-- Preserve 6.2 × 8.27 inch geometry, root template, compact daily timer, source boxes, pre-drawn tables when applicable, and roughly 3.5–4 inches of same-page space for substantial work. Usually 3–5 responses including recall and calculus; optional extensions clearly labeled. Sources distinguish Bishop exercises from tutor applications. No key with issuance.
-- Keep grades, returned work and original issued sheets intact. Day 25 is ungraded and available, not required catch-up. Grade only attempted work and record assistance/actual time; unfinished optional items incur no penalty. No fixed score denominator imported from the old course.
+Bishop Ch.19 / §§19.1.1–19.1.2 anchors the destination; Ch.6–8 supplies only prerequisites needed at each step. Exact assignment pointers are verified at authoring. This route establishes deterministic autoencoders; VAEs require a later probability/inference extension.
 
-## Math spine and destination
+Every second or third completed session, offer one genotype-likelihood task, replacing ML if preferred. The first restores pending delayed read-origin reconstruction with assistance recorded; then normalize genotype likelihood × prior weights using one shared sum. Do not require the old Day 25 sheet as catch-up. Biology is optional on request; no separate stats quota.
 
-Bishop & Bishop, *Deep Learning: Foundations and Concepts* (2024), remains the spine. Start from Ch.19 / §19.1.1: input → encoder → representation → decoder → reconstruction, trained against the original input. First use a tiny linear example with supplied weights; training comes later. The immediate target is a deterministic autoencoder, not a variational autoencoder or mastery of all neural networks.
+Calculus finishes rotate familiar ML-relevant material: bounded polynomial density area, polynomial expected loss, exponential density area, simple substitution, then expectations. Start with one integral; use two only if comfortably within time. Keep methods familiar before increasing complexity and do not claim integrations are required for the initial forward pass. Integrate one or two relevant recall items, with no ten-question gateway.
 
-Route: numerical forward pass and dimensions → reconstruction loss → parameter effects and partial derivatives → chain rule/backpropagation → one gradient update → bottlenecks, nonlinearities and generalization. Connect linear reconstruction to PCA when useful; do not require finishing PCA first. Use §§19.1.1–19.1.2, selected Ch.6–8, and §16.1; verify exact exercise IDs/pages before assigning. Parr & Howard's matrix-calculus article supplies concise supplementary explanations, with row/column conventions made explicit. Tutor scaffolds are labeled, not invented Bishop exercises.
+## Day 28 adaptation — 2026-09-20
 
-Integrals support probability densities and expectations (§§2.2–2.2.2), including expected losses. They are useful ML mathematics, not the operation used for ordinary backpropagation. Simple polynomial/exponential examples precede more advanced probability.
-
-## Other learning threads
-
-Genotype likelihoods retain Bishop's sum/product rules, conditioning, Bayes and likelihood spine with explicitly sourced ANGSD adaptations. Begin from observed repairs, then build independent-read likelihoods, latent-genotype mixtures and population-frequency models. Keep scientific assumptions explicit. Statistical reasoning belongs in these tasks.
-
-Biology remains anchored in Genes XII with verified modern assay supplements, available on request. Preserve mechanism-based explanation and continuity, without daily scheduling pressure. The longer biology and genomics maps are retained in `course/history/SYLLABUS-before-short-sessions-20260919.md` as reference, not current workload.
-
-See `course/progress.md` for attempted/issued status, `ai-grader/recall-deck.md` for observed evidence, and `curriculum/sources.md` for verified pointers.
+Normalization succeeds with the supplied table, but single-read reconstruction again omits half weights. Learner reports procedural table-filling, not fluency. Next scheduled GL task should elicit choose-chromosome → generate-base reasoning and why origin probabilities weight the routes; fade one scaffold at a time before multi-read progression. Keep pre-drawn tables when needed, but do not use repeated arithmetic completion as the sole test of understanding. Keep this within the current short budget. Resume autoencoder parameter/loss work next; no extra catch-up.
 
 ## Calculus variety calibration — 2026-09-21 (codex)
 
@@ -81,6 +73,18 @@ Learner flags repetition after two polynomial integrals and two nearly identical
 ## Assumptions to likelihoods and objectives — learner priority, 2026-09-22
 
 The learner explicitly wants long-term fluency translating modeling assumptions into a likelihood or objective through the existing problem sets. Make this a recurring thread within the short-session budget, not a separate course or extra homework. Build from a concrete scientific question: identify observed data, unknown quantities and parameters; state a sampling/noise model; derive the probability of observations; combine observations only under explicit dependence/independence assumptions; form a likelihood and, when useful, a negative-log-likelihood objective. Explain any regularization or other objective terms separately rather than implying all losses automatically follow from a likelihood. Connect squared reconstruction error to an explicitly assumed Gaussian observation model when prerequisites are ready. Include interpretation and a small assumption/failure-mode check. Fade scaffolding based on submitted reasoning: complete a missing step, explain a supplied model, then construct a small model independently. Use both autoencoder/ML and staggered genotype-likelihood applications; preserve the current 15-minute cap and calculus finish. No resequencing or retroactive sheet changes required; set 32 remains issued as-is.
+
+## Progression toward Bishop exercises — 2026-09-23 (codex)
+
+Learner reports slowly becoming comfortable with current difficulty and explicitly wants harder problems over time and a realistic route to Bishop exercises. Current short questions are introductory and scaffolded; set 32 supports removing one support at a time, not increasing duration. Set 33 adds judging a claim and an optional inverse problem. Plan an appropriate verified original Bishop exercise or clearly identified part within the next 5–10 completed sets, replacing ordinary work within the cap. Earlier Ex.3.1 parts were already attempted; distinguish a fresh independent checkpoint from first-ever exposure. A tentative 20–40 further short sets is a planning range for comfort with selected foundational exercises, not a guarantee or a forecast of whole-book proficiency. Reassess from independent setup, multi-step reasoning, checks and transfer; completion count alone is insufficient. Broader proof/matrix-heavy exercises need longer development. Continue fading scaffolds and preserve staggered GL, calculus variety and no backlog.
+
+## Set 34 adaptation — 2026-09-24 (codex)
+
+Changed-assumption origin weighting succeeds: learner predicts direction and constructs the 3/4–1/4 mixture correctly, with clear origin labels. Q2 equal mixture also correct, explanation sentence missing; do not equate absent prose with misconception. Next staggered GL may test a small two-read product with conditional independence explicit; independent posterior construction remains pending. Resume ML in between. Calculus integration method correct but square cross term and fraction addition fail: replace next finish with a compact repair and nonnegative-error check within existing time. Slope/value prompted recall repaired. Preserve scaffold fading and original Bishop checkpoint; no workload increase or automatic mastery promotion.
+
+## Set 35 adaptation — 2026-09-25 (codex)
+
+All four answers correct, including supplied-factor encoder chain rule, update/actual-loss check and polynomial repair. Fade one gradient scaffold in a later transfer or proceed to a small bottleneck interpretation; no broad independent-gradient mastery inferred. Calculus expansion/fraction/check repaired: rotate technique/purpose, not another coefficient-only repeat. Margin asks why density 1 coexists with prediction 1/4; explicitly label p_T(t) versus constant prediction a and show E[(T−a)²]=integral (t−a)²p_T(t)dt in the normal budget. Keep ~12-minute target / 15-minute stop, staggered GL and pending posterior construction; no new sheet or workload increase.
 
 ## Nucleotide-sequence modeling integration — learner request, 2026-09-25
 
@@ -116,3 +120,7 @@ Tentative route to December: finish introductory conditional-probability/GL/HMM 
 Chapter 3 alignment: local `refresher-notes-quizzes/README.md` identifies the Gadus lcWGS chapter; the existing day-5 refresher discusses GLs, allele-frequency/SFS inference and PCAngsd. These are orientation sources, not a verified current chapter methods inventory. Ground future chapter-specific exercises in the actual current analysis/methods when available, and source-check technical claims before authoring. Near-term outcomes: explain the read-error model, likelihood versus posterior, conditioning/marginalization and uncertainty rather than hard calls. Later connect shared mathematics to allele-frequency/latent-genotype estimation, SFS and covariance/PCA only to the depth the chapter needs. Population EM/SFS remains outside the one-month introductory completion promise; any later focused treatment replaces ordinary practice rather than adding a compulsory strand.
 
 Keep the two outcomes visible: explain how Evo 2 learns and how evidence supports its claims; explain why Chapter 3 estimators/analyses are appropriate, including assumptions and uncertainty. Reassess feasibility from independent changed-example performance; no guarantee that 11–17 hours by year end establishes all chapter mathematics.
+
+## Set 36 calibration — 2026-09-25 (codex)
+
+Conditioning on the immediately previous base is now correctly written in both path calculations. Full-string initial factor present, but the requested start-given probability is absent and its explanation confuses the Markov assumption with conditioning. Use a brief transferable joint/conditional check in the next Chapter 3 GL session; later weekly HMM recall can test it with changed values. Correct GCC factors followed by a decimal slip; calculus method and exact logarithmic result correct, range check omitted. No full redo or workload expansion; preserve learner-requested ML interleaving and mid-October priority.
