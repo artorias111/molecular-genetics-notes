@@ -1,3 +1,145 @@
+# Agent notes
+Summary as of [[10-09-2026]] (replaces any earlier summary). Read this first.
+
+- Contract: AGENTS.md (CLAUDE.md symlinks to it). Daily sheets ~12 min target / 15 min stop, Chapter 3 popgen priority until ~Oct 24 checkpoint, then ML toward Evo 2 explanation by Dec 31.
+- Daily sets: latest issued set 42 (GL two fish, expected T count), not yet returned. Recurring weak spot: joint vs conditional; multiplying route halves across reads instead of summing within a read. Next: TT two-A-reads check, then set 42 Q2/Q3.
+- ML refresher workbook graded 8.5/13 (sick, rushed). Computations solid; gaps are loss choice by target type, MSE vanishing push, .grad accumulation, curve diagnosis, permute vs squeeze. Feedback in `ai-grader/ml-refresher-feedback.md`.
+- Issued `misc/ml-refresher-part-2.pdf` (one sitting, 10 Q, answers in the 10-09 entry). Then a Bishop reading week (list on its last page), then a new ML quiz ~10-16-2026 on the same gaps.
+- Weekly ML notebooks replace the weekly ML sheet: `ml-notebooks/` (uv, marimo). `01-data.py` issued, not attempted. Copy cells build `projects/promoter-cnn/` (own future repo, gitignored). Roadmap in `ml-notebooks/README.md`. Test each notebook via a filled scratch copy.
+- Redirect rule: after 2 sets in a Mon–Sun week with no notebook, refuse the next set and send learner to the notebook. Starts Oct 12–18. Learner has Nextflow Summit Oct 13–14.
+- Learner worried about postdoc readiness. Be honest: coding is a real gap, misses are fixable recognition knowledge.
+- Tools: typst and poppler pinned in pixi.toml. Archive PDFs with `scripts/archive_learning.py` at issuance/grading.
+
+---
+---
+[[10-11-2026]]
+agent: claude
+
+- Graded set 42: 1.5/3. Learner sick most of the week. Q1 labels right, both-reads value 1/2(0.97) x 1/2(0.01) = 0.0024 instead of 0.49 x 0.49 = 0.2401 (3rd time). Q2 blank, wrote "help!". Q3 expected T = 0.5 correct. Feedback in `ai-grader/set-42-feedback.md`.
+- Learner asks for ~25 min/day this week only (Oct 12-18) to catch up on Chapter 3. Recorded in AGENTS.md.
+- Plan change for GL: stop repeating "collapse each box" rule. Use counts (100 reads, 48.5 + 0.5 = 49 show A), which is what fixed joint vs conditional in set 41.
+- Honest status: still in plan units 1-3 (GL to allele frequency). Units 4-14 untouched with 13 days to Oct 24. Raised scope vs date with learner.
+- Archived set 36 PDF at set 43 issuance. Manifest `course/archive-manifests/20261011-211053-324098.json`.
+- Issued `problem-sets/set 43.typ/.pdf`, 5 pages, 25-min week format, no key. Counts-framed GL, new sequencer 0.94/0.02. Q1 AT one read 47 + 1 = 48 → 0.48; pairs 23.04 → 0.2304. Q2 two A reads: AA 0.94/0.8836, AT 0.48/0.2304, TT 0.02/0.0004. Q3 fish 2 at f=0.5 as 100 fish: 23.5 + 12 + 0.0025 = 35.5 → 0.355; optional f=0.25 → 0.6188. Q4 0.125 x 0.355 = 0.0444 vs 0.0094 (~4.7x); optional 0.0963 x 0.6188 = 0.0596. Q5 covariance: means 1, 1; products 1,0,0,1; cov 0.5, positive.
+- Learner found Q1 table vague ("fraction of what?"). Remade set 43: every header says what goes in the cell and how; Q2 got a step-by-step pairs table (a)-(d); answer line for Q1. Same answers as above.
+- Verifier agent solved it from the sheet alone: answers matched. Fixed its flags: undefined fish 2, old vs new sequencer, fish 1 read order and L, f=0 cell source, Q5 centering wording, spurious "Recall 5 min" (template now hides Recall when review = 0; sets 38/42 still compile).
+- New rule: second agent verifies every sheet before issuing. In AGENTS.md and memory.
+- Graded set 43: 4.4/5. Counting framing worked: pairs table 0.2304, GL table, fish 2 = 0.355, product 0.0443 all right. Slips: AT one-read cell 0.94 (copy), covariance sign read as "dosage below mean". Learner asked "wdym better supported?": undefined term, verifier missed it. Feedback in `ai-grader/set-43-feedback.md`.
+- Next: unscaffolded two-read GL with changed error (does counting transfer?), likelihood over an f grid, covariance sign.
+- Learner: tables felt like instruction-following, wants varied formats and real by-hand math. Recorded in AGENTS.md and memory.
+- Issued `problem-sets/set 44.typ/.pdf`, 5 pages, 25 min, no tables, no key. First varied-format sheet. Q1 derive P(A|AT) = 1/2(1-e) + 1/2(e/3) = 1/2 - e/3; e=0.06 gives 0.48; both reads (1/2 - e/3)^2; e=0 gives 1/2. Q2 find the mistake (1/2(0.94) x 1/2(0.02) = 0.0047 is one origin combo; add within a read, multiply across independent reads). Q3 predict f ~ 0.25 (1 T of 4 copies); compute f=0.25: 0.09625 x 0.61876 = 0.0596. Q4 sketch 5 points, peak ~0.28 (grid max 0.281), ratio 0.0596/0.0094 ~ 6.3. Q5 covariance sign: X positive, Y = -2/3.
+- Verifier agent answers matched. Fixed: read and fish independence, HWE, f defined as T frequency, L defined, old sequencer spelled out, covariance formula on sheet, y ticks and aligned x ticks on axes.
+- This week's sets: 44 is set 1 of 2 for Oct 12-18 (set 43 was done Oct 11). After one more set, notebook 01.
+- Sources reused from verified pointers (Bishop §2.1.2, §2.1.6, §16.1.1; ANGSD web pages). Not re-extracted.
+- Learner decision: keep Oct 24, trim scope. GL, allele freq, SFS, FST, PCA full depth. Coalescent, ABBA-BABA, jackknife explain-only. At least 1 ML/week always (this week notebook 01). ML part 2 and quiz moved to after checkpoint. Recorded in AGENTS.md and chapter-3 plan.
+
+---
+
+[[10-09-2026]]
+agent: claude
+
+- Graded ML refresher workbook return: 8.5/13 core, optional Q11 0.5, Q15 skipped. Learner sick, rushed. Feedback in `ai-grader/ml-refresher-feedback.md`, log row added.
+- Solid: conv/189, CE values, gradient, GD step, ReLU collapse. Missed: permute vs squeeze, softmax shift algebra, loss by target type (log-TPM/counts swapped), MSE vanishing push, .grad accumulation (-8), steps per epoch, curve diagnosis (flat ln K, nan).
+- Issued `misc/ml-refresher-part-2.typ/.pdf`, 10 pages, 10 Q, one sitting ~25 min, no key. Last page: Bishop reading list for the week (§6.4, §4.1.2, §7.2.2-7.2.4, §9.2-9.3, optional §7.3, §8.1).
+- Answers checked privately: Q1 (64,4,200), unchanged, (64,32), permute(0,2,1). Q2 e^2/(e^2+1)=0.881, differences. Q3 count/Poisson, real/MSE, one of 3/CE, yes-no/BCE, real/MSE. Q4 one of 4, CE, (N,4,L). Q5 -0.953, 0.0448, -0.0427, ~22x. Q6 -4,-8,-12; w=1.8. Q7 L=0,1,9,49; best 0.125. Q8 1/10, 16/160, 500/5000; last batch 20. Q9 not learning/raise lr or check opt.step; lr too high/lower; overfit/early stop at 6; underfit/bigger model. Q10 0.1, 1e-5, -1e-5; Adam 0.001, 0.001, -0.001.
+- Plan: learner does part 2, reads a week, new ML quiz ~10-16-2026.
+- Learner worried about postdoc readiness after the score. Told them the misses are recognition knowledge, fixable, and one sick-week sheet can't judge readiness.
+- Learner wants hands-on building. Can't recall old TATA CNN (synthetic data) or liver AE. Decision: one marimo notebook a week replaces the weekly ML session. Recorded in AGENTS.md.
+- Set up `ml-notebooks/` (uv env, marimo 0.25.1, torch) and `projects/promoter-cnn/` skeleton (gitignored here, future own repo).
+- Issued `ml-notebooks/01-data.py`: download, baseline 54.4%, gc_content, one_hot, encode with permute. 4 TODOs with assert checks. Tested: filled scratch copy passes, copy cells run as a package (`torch.Size([8, 4, 251])`).
+- Corrected myself to learner: earlier I said they had already built real models. Not true if they can't recall them.
+- Redirect rule added to AGENTS.md: after 2 sets in a Mon–Sun week with no notebook, refuse the next set and send learner to the notebook. No calendar event made, learner preferred this.
+- Pinned poppler 26.9.0 in pixi.toml to render handwritten returns. Archived 4 PDFs (returns 38-41). Manifest `course/archive-manifests/20261009-185156-888671.json`.
+
+---
+
+[[10-06-2026]]
+agent: claude
+
+- Learner request: ML refresher (blanked in a meeting on why loss choice matters), plus optimizer and the rest of the pipeline. Read `Notes/ml journal.md` and linked notes (loss, CE, optimizer, SGD, batch GD, Adam, softmax, logit, regularization, MLE, MLP, CNN, PyTorch, autoencoder, backprop, data split).
+- First draft (prose then quiz) replaced on learner feedback: wants an interleaved workbook (text, question, text, question), broad coverage, not overwhelming.
+- Issued `misc/ml-refresher-workbook.typ/.pdf`, 13 pages, 15 questions, 3 sittings (~15 min each), no key. Parts: tensors/one-hot/embedding, neuron + ReLU collapse, Conv1d as PWM + pooling, logits/softmax, loss = NLL table, CE pairing vs MSE gradient, backprop/zero_grad, optimizers (GD, momentum, Adam), batches/epochs, overfitting/regularization, autoencoders, optional alignment per-site CE. Last page: full annotated MotifCNN + loop.
+- Note misconceptions flagged in-sheet (notes not edited): ReLU called regularization; batch GD vs mini-batch; MLE as alternative to loss + GD.
+- Answers checked privately: Q1 (64,4,200) via permute(0,2,1); G row (-0.4,0.8). Q2 z=0.5 ReLU 0.5; z=-1.5 ReLU 0. Q3 no act -5, 7; ReLU 1, 7. Q4 0,3,0,1,2; length 5, max 3; 189. Q5 0.881/0.119, same. Q6 Gaussian/MSE, Bernoulli/BCEWithLogits, categorical/CE, Poisson or NB/PoissonNLL. Q7 0.357, 2.303, 1.386 (ln 4). Q8 a=0: -0.5 vs -0.125; a=-5: -0.993 vs -0.0066 (~150x). Q9 y=2, L=1, grad -4; -8 without zero_grad. Q10 w=1.4, y=2.8; eta 1: w=5, y=10, L=49. Q11 SGD 0.1, 1e-5; Adam 0.001 both. Q12 1, 16, 1000; last batch 40. Q13 overfit/early stop or dropout; lr too small or bug; lr too big. Q14 Gaussian constant variance; (N,4,L) logits + CE; too few numbers. Q15 0.105, 0.511, 1.386, 2.996, mean 1.25; no, irreducible floor.
+- Bishop §4.1.2, §6.4, §7.2-7.3, §9.2-9.3 pages verified from archived PDF; logged in `curriculum/sources.md`.
+- Archived 2 PDFs (reticulation-mtdna-day, set 37 return). Manifest `course/archive-manifests/20261006-112818-678788.json`.
+
+---
+
+
+[[10-02-2026]]
+agent: claude
+
+- Answered learner question on genetic/evolutionary algorithms (uses, GARLI link, peripheral to Evo 2 and Chapter 3).
+- Learner accepted one optional GA vs gradient-step sheet after the ~Oct 24 checkpoint. Recorded in AGENTS.md.
+- Graded set 41: 2.25/3. Q1 denominators all correct (first clean joint vs conditional). Q2 multiplied the 1/2 halves across reads instead of summing routes within a read. Q3 sum over genotypes correct, favored-f sentence omitted. Feedback in `ai-grader/set-41-feedback.md`.
+- Issued `problem-sets/set 42.typ/.pdf`, 3 pages, no key. Q1 either/or vs both for AT (0.49, 0.2401). Q2 two fish: fish 2 at f=0.5 = 0.355, product 0.0444; optional f=0.25 gives 0.0963 x 0.6188 = 0.0596 (best of the three). Q3 expected T count 0.5; optional f = (0.5+1.5)/4 = 0.5.
+- Learner felt slow. Kept to 3 questions, prefilled f=0 row.
+- d_xy vs d_a pop quiz moved from Fri 10-02 to Wed [[10-07-2026]], learner schedule. Build it that day.
+- Evening chat session (no Kindle): did set 42 Q1 by typing. Either/or sum right every time (0.49, 0.97). Both step wrong twice: multiplied inner pieces, 1/2(0.97) x 1/2(0.97), instead of box totals. Explained it as 1 of 4 route terms; rule "collapse each box to one number, then multiply". Stopped tired before the TT check. Not graded.
+- Next: open with TT two-A-reads check (box 0.01, product 0.0001), then set 42 Q2/Q3. Q1 answers already seen.
+- Archived 6 PDFs (set 35 sheet, returns 35/36, Markov side quest, zebrafish quiz). Manifest `course/archive-manifests/20261002-163559-969681.json`.
+
+---
+
+[[10-01-2026]]
+agent: claude
+
+- Issued `problem-sets/set 41.typ/.pdf`, 3 pages, no key. Q1 circle-the-denominator table (700/1000, 14/1000, 14/700). Q2 unscaffolded two-read L for A,A reads, 0.97/0.01 (.9409/.2401/.0001). HWE primer. Q3 refresher: P(reads given f) summing over genotypes for an A,T fish with L = .01/.24/.01: f=0 gives .01, f=0.5 gives .125, optional f=0.1 gives .0514.
+- ANGSD Allele Frequencies page checked online: -doMaf, Kim et al. 2011 estimator via EM, allows HWE departures; page gives no formula, so the sum-over-genotypes form is labeled a tutor toy version.
+- Learner said today felt slow; sheet kept to 3 questions.
+- Graded set 40: 2.25/4. Q4 partial derivative and AE = PCA idea right. Q1 count table wrong (4th joint/conditional miss, 1/2 GL weights over-applied). Q2 fish 1 sign error flipped the conclusion. Feedback in `ai-grader/set-40-feedback.md`.
+- Next recall: circle-the-denominator only, no algebra. Phrase every bullet as an instruction (bare "1.5 - 1.16" confused learner).
+
+---
+
+[[09-30-2026]]
+agent: claude
+
+- Issued `problem-sets/set 40.typ/.pdf` (weekly ML session), 4 pages, no key. Q1 count-table joint vs conditional (14/1000 vs 14/700). Primer: linear AE, 1-number bottleneck, encoder = set 39 projection. Q2 reconstruct fish 1 and 3. Optional Q3 mean error 0.34 = 1.5 - 1.16. Q4 refresher dE/dz = 2z + 2.8, zero at z = -1.4.
+- Answers checked privately: Q2 xhat (-0.84,-1.12) err 0.04; (0.36,0.48) err 0.64.
+- Learner self-report: mixes up P(B|G) and P(G,B), knows meanings. Drilling P(B|G) = P(G,B)/P(G).
+- Graded set 39: 3/4. GL one-read table, one-read posterior and projection correct. Joint to conditional missed a 3rd time; plan a count-table primer. Next: set 40 ML session, then allele-frequency likelihood.
+- Learner moved Chapter 3 checkpoint to ~Oct 24 to fit coalescent, ABBA-BABA, jackknife and synthesis (4–6 extra sessions). Recorded in AGENTS.md, chapter-3 plan and progress.
+- Issued `problem-sets/set 39.typ/.pdf`, 4 pages, no key. Q1 joint to conditional (0.014/0.70). Worked one-read example with 1/2 origin weights, then Q2 core: fill P(B given AT/AA) for 0.97/0.01 sequencer with row sums. Optional Q3: one T read posterior (same 0.7/0.2/0.1 priors). Q4 refresher: projection of set 38 centered fish onto u=(0.6,0.8), variance 1.16 vs SNP 1 alone 1.
+- Each requested output listed as its own line, per set 38 pattern.
+- Answers checked privately: Q2 AT .49/.01/.01/.49, AA .97/.01/.01/.01. Q3 posteriors .035/.485/.480. Q4 z = -1.4, -0.6, 0.6, 1.4.
+
+---
+
+[[09-30-2026]]
+agent: claude
+
+- Graded set 38 return: 3.25/4. Posterior normalization and HMM posterior correct. Q4 covariance table right but re-centered in formula (3/2 vs 0.5). Emissions and sign interpretation omitted. Feedback in `ai-grader/set-38-feedback.md`; log and progress updated.
+- Pattern across 36–38: last ask of a multi-part question dropped. Future sheets list each requested output on its own line.
+- Answered margin "why 3?": biallelic restriction; ANGSD computes all 10.
+
+---
+
+[[09-29-2026]]
+agent: claude
+
+- Fixed `misc/reticulation-mtdna-day.typ` primer §2 and Q6 (three-times rule is Palumbi 2001, CR = l/d for ogac), recompiled. His returned answers live in the gadus-assembly repo, `reading-background/`. Discussed, not graded.
+- Friday 10-02 pop quiz on d_xy vs d_a agreed; build it that day.
+
+---
+
+[[09-29-2026]]
+agent: claude
+
+- Graded set 37 return: 1.75/4. Main gap: 1/2 chromosome-origin weights missing in one-read mixture (Q2, Q3). Also Q1 conditional from joint wrong, P(A given AA) set to 1, range check skipped again. Feedback in `ai-grader/set-37-feedback.md`; log and progress updated.
+- Set 39 plan: one-read mixture repair with sums-to-1 check plus short joint/conditional item before allele-frequency work.
+
+---
+
+[[09-28-2026]]
+agent: claude
+
+- Issued standalone `misc/reticulation-mtdna-day.typ/.pdf` for the Ch2 paper (reading day 09-29). Imports refresher template helpers, own header. 14 pages, 15 questions, visually checked, no key.
+- Did not run the archive script; this is not a numbered set.
+
+---
+
 [[09-28-2026]]
 agent: claude
 

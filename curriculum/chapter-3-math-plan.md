@@ -1,5 +1,17 @@
 # Chapter 3 mathematics: focused route to mid-October
 
+## Checkpoint scope trimmed, date kept — learner decision, 2026-10-11 (claude)
+
+- Checkpoint stays ~Oct 24. Full depth: GL, allele frequency, SFS, FST/divergence, PCA. Coalescent/ILS and ABBA-BABA/f4 (and jackknife) are explain-only: what it measures, key assumption, one sentence on limits. No calculation sheets required for them.
+- At least one ML session every week, never skipped for catch-up. This week it is notebook 01. ML refresher part 2 and the ML quiz move to after the checkpoint.
+
+## Checkpoint moved to ~Oct 24 — learner decision, 2026-09-30 (claude)
+
+- Chapter 3 checkpoint moves from ~Oct 15 to ~Oct 24, 2026, to include coalescent/ILS, ABBA-BABA/f4, block jackknife/nulls and the pipeline synthesis (plan units 11–14).
+- Estimate: 4–6 extra sessions (1 coalescent, 1 ABBA-BABA, 1 jackknife, 1 synthesis, 1–2 repair slack) at 4–5 sessions/week, keeping ~1 ML session/week and weekly brief HMM recall.
+- Every "mid-October" reference below now means ~Oct 24. The ML-to-Evo 2 block after it shortens by ~1 week; Dec 31 target unchanged.
+- If GL/SFS repairs run long, report the slip at the time instead of silently extending again.
+
 ## Closing math rotation replaces routine integrals — learner request, 2026-09-25
 
 From the next new sheet (set 38 onward), replace the default closing integration question with one brief 2–4-minute math refresher chosen from:

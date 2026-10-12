@@ -5,3 +5,4 @@ platforms = ["osx-arm64", "osx-64", "linux-64"]
 
 [dependencies]
 typst = "==0.15.1"
+poppler = "==26.9.0"

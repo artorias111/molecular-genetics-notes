@@ -118,7 +118,7 @@
   assert(total <= 60, message: "Required daily work must fit within 60 minutes")
   if compact {
     if short_session {
-      text(size: 9pt)[Recall #review min · #if math > 0 [#math_label #math min · ]#if ml > 0 [ML #ml min · ]#closing_label #calculus min. *Cap: #total min.*]
+      text(size: 9pt)[#if review > 0 [Recall #review min · ]#if math > 0 [#math_label #math min · ]#if ml > 0 [ML #ml min · ]#closing_label #calculus min. *Cap: #total min.*]
     } else {
     text(size: 9pt)[Recall #review min · Popgen #math min · ML #ml min · Bio #biology min · Stats #stats min. *Cap: #total min.*]
     }
