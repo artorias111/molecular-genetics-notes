@@ -11,6 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE = Path('/Users/shriram/Library/CloudStorage/OneDrive-UniversityofIllinois-Urbana/project-files/molecular-genetics-notes')
 NUMBER = re.compile(r'^(?:problems-day-|problem set |set )(\d+)$')
+DAY = re.compile(r'^day (\d+)$')
+SKIP = {'.git', '.venv', 'venv', '.pixi', 'node_modules', 'site-packages', '__marimo__'}
 
 def digest(p):
     h = hashlib.sha256()
@@ -23,19 +25,26 @@ def plan(today):
     cutoff = today - timedelta(days=6)
     numbered = [int(m[1]) for p in (ROOT / 'problem-sets').glob('*.pdf') if (m := NUMBER.match(p.stem))]
     retained = sorted(set(numbered))[-7:]
+    days = [int(m[1]) for p in (ROOT / 'transformers').glob('*.pdf') if (m := DAY.match(p.stem))]
+    retained_days = sorted(set(days))[-7:]
     moves = {}
     for p in sorted(ROOT.rglob('*.pdf')):
         rel = p.relative_to(ROOT)
-        if p.is_symlink() or '.git' in rel.parts:
+        if p.is_symlink() or SKIP & set(rel.parts):
             continue
         m = NUMBER.match(p.stem) if rel.parts[0] == 'problem-sets' else None
+        d = DAY.match(p.stem) if rel.parts[0] == 'transformers' else None
+        if d:
+            if int(d[1]) not in retained_days:
+                moves[rel] = 'older numbered day sheet'
+            continue
         dates = re.findall(r'\d{4}-\d{2}-\d{2}', p.stem)
         observed = date.fromisoformat(dates[-1]) if dates else datetime.fromtimestamp(p.stat().st_mtime).date()
         reference = rel.parts[0] in ('textbooks', 'reference') or str(rel).startswith('course/reference/') or str(rel) == 'misc/jkae299.pdf'
         reason = ('reference PDF' if reference else 'older numbered sheet' if m and int(m[1]) not in retained else 'older than seven calendar dates' if not m and observed < cutoff else None)
         if reason:
             moves[rel] = reason
-    return retained, cutoff, moves
+    return retained + retained_days, cutoff, moves
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)

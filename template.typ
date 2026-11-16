@@ -2,9 +2,9 @@
 
 #let sheet(day: "01", title: "", set_label: none, body) = {
   set page(
-    width: 6.2in, 
-    height: 8.27in,
-    margin: (top: 0.8in, bottom: 0.6in, left: 0.5in, right: 0.5in),
+    width: 6.21in,
+    height: 8.94in,
+    margin: (top: 0.7in, bottom: 0.6in, left: 0.45in, right: 0.45in),
     header: context {
       let total = question_counter.final().first()
       align(right, text(size: 10pt, fill: luma(100), weight: "bold")[
@@ -23,7 +23,7 @@
 
 #let section_heading(title) = {
   v(1.5em)
-  text(size: 14pt, weight: "bold", title)
+  text(size: 15pt, weight: "bold", fill: rgb("#1f4e79"), title)
   v(0.5em)
 }
 
@@ -47,7 +47,7 @@
   question_counter.step()
   v(gap)
   context [
-    *Q#question_counter.get().first().* #body
+    #text(fill: rgb("#1f4e79"))[*Q#question_counter.get().first().*] #body
   ]
   if space > 0pt { block(height: space, width: 100%)[] }
 }
@@ -63,8 +63,8 @@
 #let ref_box(body) = {
   v(0.5em)
   rect(
-    fill: luma(240),
-    stroke: 0.5pt + luma(150),
+    fill: rgb("#eef4fb"),
+    stroke: 0.5pt + rgb("#8fb3d9"),
     radius: 4pt,
     width: 100%,
     inset: 10pt,

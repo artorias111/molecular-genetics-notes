@@ -1,5 +1,14 @@
 # ML notebooks
-One marimo notebook a week. Together the `# copy to` cells build `projects/promoter-cnn/`.
+From 11-03-2026: weekly sessions follow the plan in `../transformers/README.md` (Weekly coding session). `# %%` cells in Zed, I write the code. Marimo notes below are older.
+One marimo notebook a week.
+
+## Transformer notebooks (from 10-30-2026)
+Paired with the 30-day sheets in `../transformers/`. AI-assisted: I write the prompt, my assistant writes the code, I read every line. Checks use my hand answers from the paper sheets. Each one is also a blog post.
+- `03-attention-scores.py`: one_hot, embed, scores on a real promoter. After day 06.
+- Export for the blog: `uv run marimo export md 03-attention-scores.py -o 03-attention-scores.md`
+
+## Old CNN route (paused 10-28)
+Together the `# copy to` cells build `projects/promoter-cnn/`.
 
 - Open: `uv run marimo edit 01-data.py` from this folder.
 - Fill the `...` TODOs. Each check cell says if it worked.

@@ -34,6 +34,11 @@ Practical default at 4–5 completed sessions/week: 3–4 Chapter 3 sessions and
 Preserve ~12-minute target / 15-minute stop, five-minute complete core, brief calculus and generous handwriting space. These are planning proportions, not attendance quotas. Because ML sessions use part of the same finite budget, the previous 14-popgen-session estimate is a topic/dependency map, not 14 popgen sessions plus extra ML/HMM work. Approximately 9–12 Chapter 3 sessions may fit at this cadence; prioritize essential calculations and explanation, combine only demonstrated skills and report remaining gaps at mid-October rather than guaranteeing full coverage. Autoencoder recall/session selection uses graded set 35 evidence; no automatic promotion of mastery. Set 36 and existing returns remain unchanged.
 
 
+## Route update, 2026-10-15 (claude)
+
+- GL demonstrated (set 46 Q1). Two-fish reads setup retired. Hand EM dropped; EM goes to a notebook.
+- One topic per set, see/do/use. Remaining route to Oct 24: SFS see (set 47), SFS use, pi, dxy + FST see, FST/dxy do-use, PCA see/do/use. Pi and dxy added at learner request.
+
 Confirmed scope source: learner-designated `refresher-notes-quizzes/`, 2026-09-25. Agent: codex. This is the Chapter 3 preparation sequence within the existing daily course, not a new worksheet series or an instruction to complete the old 1–1.5-hour refreshers. Preserve those files and any returns.
 
 Target: around October 15, explain the essential mathematics behind the Chapter 3 analyses, demonstrate small calculations, and state assumptions/uncertainty. Then shift strongly to ML mathematics toward the December 31 Evo 2 explanation target. The original 14-unit outline below is a dependency map, not a quota of 14 popgen sessions. With the learner-requested ML interleaving, plan roughly 9–12 Chapter 3 sessions plus about three ML sessions; full coverage remains ambitious, not a mastery promise. Retain ~12 minutes / 15-minute stop, five-minute complete core, one optional extension and brief calculus; choose relevant calculus connections where useful. No backlog from skipped days. Reallocate from successful checks to observed gaps rather than automatically adding sessions.

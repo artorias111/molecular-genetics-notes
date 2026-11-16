@@ -23,3 +23,19 @@ projects/**/*.pyc
 
 # Own git repo, built from ml-notebooks
 projects/promoter-cnn/
+
+# Private: grades, keys, logs, typed answers
+agent_notes.md
+misc/*feedback*.md
+projects/lcwgs-lab/review-log.md
+interview-prep/answers/
+transformers/laptop/answers/
+
+# Unpublished thesis results used in sheets
+problem-sets/set 48.typ
+problem-sets/set 49.typ
+problem-sets/drafts/
+
+# Junk
+**/__marimo__/
+ml-notebooks/*.png

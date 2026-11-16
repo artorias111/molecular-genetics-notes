@@ -1,3 +1,5 @@
+Agents looking for how to make quizzes or study sheets: read design-guide.md.
+
 Daily learning: math, molecular biology, and statistics
 
 A handwritten, one-hour course for understanding genomics through mechanisms and mathematics.

@@ -161,3 +161,23 @@ ML refresher workbook, misc/ml-refresher-workbook (claude, 2026-10-06): extracte
 Set 43 (claude, 2026-10-11): reused previously verified pointers, not re-extracted. Bishop §2.1.2 PDF pp.46–48 / printed pp.26–28; §2.1.6 PDF p.51 / printed p.31; §16.1.1 Eqs.16.1/16.3 PDF pp.511–512 / printed pp.497–498. ANGSD GL and Allele Frequencies web pages. New sequencer 0.94/0.02 and all counts tutor-authored.
 
 Set 44 (claude, 2026-10-11): reused verified pointers, not re-extracted. Bishop §2.1.2 PDF pp.46–48 / printed pp.26–28; §2.1.6 PDF p.51 / printed p.31; §4.1.2 Likelihood function PDF pp.133–134 / printed pp.114–115; §16.1.1 Eqs.16.1/16.3 PDF pp.511–512 / printed pp.497–498. ANGSD GL and Allele Frequencies web pages. All values tutor-authored.
+
+Set 44 (claude, 2026-10-11): reused verified pointers, not re-extracted. Bishop §2.1.2 PDF pp.46–48 / printed pp.26–28; §2.1.6 PDF p.51 / printed p.31; §4.1.2 PDF pp.133–134 / printed pp.114–115; §16.1.1 PDF pp.511–512 / printed pp.497–498. ANGSD GL and Allele Frequencies web pages. All items tutor-authored.
+
+Set 45 (claude, 2026-10-12): reused verified pointers. Bishop §2.1.2 PDF pp.46–48; §2.1.3 PDF pp.48–49 / printed pp.28–29; §2.2.2 Eq.2.38 PDF p.54 / printed p.34; §15.3 PDF p.489 / printed p.474; §16.1.1 PDF pp.511–512. ANGSD GL and Allele Frequencies web pages. EM step is a tutor toy, not ANGSD's exact algorithm.
+
+## Population genetics textbook (added 2026-10-20)
+
+- Gillespie, J. H. (2004). _Population Genetics: A Concise Guide_, 2nd ed. Johns Hopkins. Local copy archived at `textbooks/Population genetics, a concise guide.pdf` under the OneDrive archive root. 330 PDF pages. Printed page numbers not verified; cite PDF pages.
+  - §2.3 Mutation and drift (θ = 4Nu, heterozygosity): PDF pp.56–62.
+  - §2.6 The coalescent (θ, segregating sites, Watterson): PDF pp.72–77. Tajima's D: PDF pp.78–80.
+  - §4.3 Genetic draft (linked selection): starts PDF p.180.
+  - §5.5 Subdivision (F_ST): starts PDF p.208.
+  - No d_xy, SFS-based inference, PCA or f-statistics. Use papers for those.
+
+## CS229 lecture notes (added 2026-11-03)
+
+- Ng and Ma, CS229 Lecture Notes, June 11 2023. `textbooks/CS 229 notes Andrew Ng.pdf`, local.
+- Offset checked: PDF page = printed page + 1 (ch 1 printed 8 / PDF 9, ch 7 80 / 81, ch 11 148 / 149).
+- Section starts (printed): §1.1 9, §1.2.1 13, §1.3 15, §2.1 20, §2.3 24, §2.4 27, §3.1 29, §3.2 31, §4.1.1 35, §4.2 41, §5.1 48, §5.3 49, §5.4 53, §6.1 59, §6.7 72, §7.2 84, §7.3 92, §7.4 98, §7.5 109, §8.1 115, §9.1 135, §9.3 139, §9.4 142, ch 10 145, §11.1 148, §11.2 151, §11.3 152, §11.5 160, ch 12 165, ch 14 177.
+- Sequence kernels: Leslie, Eskin, Noble 2002 PSB (spectrum kernel); Ghandi et al. 2014 PLoS Comput Biol (gkm-SVM, gapped k-mers).

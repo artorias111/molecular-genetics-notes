@@ -14,7 +14,7 @@ def _():
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""
-    # Week 1: real promoters into a tensor
+    # real promoters into a tensor
 
     **The series.** One notebook a week. Together they build `promoter-cnn`: a 1D CNN that says whether a 251 bp human sequence is a promoter. Same model as the refresher workbook, now on real data.
 
@@ -92,7 +92,7 @@ def _(mo, train):
 @app.cell
 def _(train):
     # TODO: fraction of training sequences with label 1. One line of pandas.
-    baseline = ...
+    baseline = train['label'].value_counts(normalize=True)[1]
     baseline
     return (baseline,)
 
@@ -115,18 +115,15 @@ def _(mo):
     return
 
 
-@app.cell
-def _():
-    # copy to: src/promoter_cnn/data.py
-    def gc_content(seq):
-        # TODO: fraction of bases that are G or C. str.count helps.
-        return ...
-
-    return (gc_content,)
+@app.function
+# copy to: src/promoter_cnn/data.py
+def gc_content(seq):
+    a = seq.count('G') + seq.count('C')
+    return a / len(seq)
 
 
 @app.cell
-def _(gc_content, mo, train):
+def _(mo, train):
     assert gc_content("GGCA") == 0.75, f"gc_content('GGCA') gave {gc_content('GGCA')}, expected 0.75."
     gc_by_class = train.seq.apply(gc_content).groupby(train.label).mean().round(3)
     mo.md(f"""
@@ -157,8 +154,7 @@ def _(np):
         x = np.zeros((len(seq), 4), dtype=np.float32)
         for i, base in enumerate(seq):
             if base in BASES:
-                # TODO: set the right cell of row i to 1. BASES.index(base) gives the column.
-                ...
+                x[i, BASES.index(base)] = 1
         return x
 
     return (one_hot,)
@@ -189,8 +185,8 @@ def _(np, one_hot, torch):
     # copy to: src/promoter_cnn/data.py
     def encode(seqs):
         x = torch.from_numpy(np.stack([one_hot(s) for s in seqs]))
-        # TODO: reorder (N, L, 4) into (N, 4, L).
-        x = ...
+        x = x.permute(0, 2, 1)
+    
         return x
 
     return (encode,)
@@ -210,6 +206,12 @@ def _(encode, mo, one_hot, train):
 def _(mo):
     mo.md(r"""
     ## Done for the week
+
+    **One-time setup**, from `projects/promoter-cnn/`:
+    ```
+    uv init --lib --name promoter-cnn --python 3.12
+    uv add numpy pandas pyarrow torch
+    ```
 
     **Copy into `projects/promoter-cnn/src/promoter_cnn/data.py`, in this order:**
     1. The imports cell.
